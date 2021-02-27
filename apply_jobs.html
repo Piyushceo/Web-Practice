@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/apply_jobs.css">
+    <title>Enter Job Data</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1 style="text-align: center;">Apply Jobs</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="firstname">First Name <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input  name="firstname"type="text" placeholder="Enter your firstname" pattern="[A-Za-z ]{1,32}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lasttname">Last Name <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input  name="lasttname"type="text" placeholder="Enter your lastname" pattern="[A-Za-z ]{1,32}" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input name="email" type="text" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="exp">Do you have previous experience?</label>
+                    </td>
+                    <td>
+                        <select name="exp" id="exp" onchange="showEmployeeInformation(event)" required>
+                            <option>Yes</option>
+                            <option selected>No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="noofexp">
+                    <td>
+                        <label for="noofexp">Years of experience? <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input  name="noofexp" id="noofexp-input" type="text" pattern="[0-9]{1}" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="zip">Zip Code <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input name="zip" type="text" pattern="[0-9]{6,6}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city">City <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="text" name="city" pattern="[A-Za-z ]{5,32}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">State <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="text" name="state" pattern="[A-Za-z ]{5,32}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="resume">Resume <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="file" name="resume" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="reset">Clear</button>
+                    </td>
+                    <td>
+                        <button type="submit">Submit Form</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src='js/apply_jobs.js'></script>
+</body>
+</html>

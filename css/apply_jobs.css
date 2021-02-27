@@ -1,0 +1,43 @@
+body
+{
+    margin:0px;
+    width: 100%;
+    font-family: fantasy;
+    display: inline-block;
+}
+.container
+{
+    border:solid lightgray 1px;
+    padding:10px;
+    display:inline-block;
+}
+.required
+{
+    color:red;
+}
+table td
+{
+    width:50%;
+    border-bottom:dashed lightgray 1px;
+    padding:10px;
+}
+input,select,textarea
+{
+    width:300px;
+    border:solid lightgray 2px;
+    padding:10px;
+    border-radius:5px;
+}
+button
+{
+    width:100%;
+    padding:10px;
+}
+textarea
+{
+    border-radius:5px;
+}
+#noofexp
+{
+    display:none;
+}

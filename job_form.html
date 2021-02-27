@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Job Data</title>
+    <link rel="stylesheet" href="css/job_form.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1 style="text-align: center;">Job Form</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="title">Title <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input  name="title"type="text" placeholder="Enter the title" pattern="[A-Za-z ]{1,32}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="department">Department <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <select name="department" required>
+                            <option>Operations</option>
+                            <option>IT</option>
+                            <option>Management</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="type">Type <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <select name="type" required>
+                            <option>PAT</option>
+                            <option>GT</option>
+                            <option>ITES</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="country">Country <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <select name="country" required>
+                            <option>India</option>
+                            <option>USA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="description">Description <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <textarea name="description" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="openingdate">Opening Date <sup class='required'>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="date" name="openingdate" id="openingdate" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="reset">Clear</button>
+                    </td>
+                    <td>
+                        <button type="submit">Submit Form</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="js/job_form.js"></script>
+</body>
+</html>
