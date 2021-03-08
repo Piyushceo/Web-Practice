@@ -105,6 +105,15 @@ public class OrmLearnApplication {
    	 	LOGGER.info("End");
     }
     
+    public static void testGetAllPermanentEmployees() {
+
+    	LOGGER.info("Start");
+    	List<Employee> employees = employeeService.getAllPermanentEmployees();
+    	employees.forEach(e->LOGGER.debug("Permanent Employees:{}", e.getName()));
+    	//employees.forEach(e -> LOGGER.debug("Skills:{}", e.getSkillList().toString()));
+    	LOGGER.info("End");
+
+    	}
 	public static void main(String[] args) {
 		SpringApplication.run(OrmLearnApplication.class, args);
 		LOGGER.info("Inside main"); 
@@ -123,11 +132,12 @@ public class OrmLearnApplication {
 		  * To test employees comment out below
 		  */
 		// testAddDepartment();
-		 testAddEmployee();
+		 //testAddEmployee();
 		 testGetEmployee();
 		 testUpdateEmployee();
 		 testGetDepartment();
-		 testAddSkillToEmployee();
+		 //testAddSkillToEmployee();
+		 testGetAllPermanentEmployees();
 	}
 
 }
